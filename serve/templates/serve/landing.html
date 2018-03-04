@@ -1,0 +1,516 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        .navbar {
+            background-color: #392a3d;
+        }
+
+        footer.page-footer {
+            background-color: #392a3d;
+            margin-top: 2rem;
+        }
+
+        .view {
+            background: url("https://mdbootstrap.com/img/Photos/Others/images/80.jpg")no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .full-bg-img {
+            color: #fff;
+        }
+
+        .payment .fa:not(:first-child) {
+            margin-left: 10px;
+            color: rgba(255, 255, 255, .8);
+        }
+
+        input[type="text"]:focus:not([readonly]) {
+            border-color: #ff3547;
+            box-shadow: 0 1px 0 0 #ff3547;
+            color: #fff;
+        }
+
+        input[type="text"]:not([readonly])+label {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            font-size: 1.2rem
+        }
+
+        input[type="text"]:focus:not([readonly])+label {
+            color: #fff;
+        }
+
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Navigation & Intro-->
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <strong>Navbar</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item btn-group">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
+                            </a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+
+        <!--Mask-->
+        <div class="view hm-black-light">
+            <div class="full-bg-img flex-center">
+                <ul>
+                    <li>
+                        <h1 class="display-4 mb-5 mt-5 pt-5 wow fadeInUp title">
+                            <strong>Hey, wanna eat something?</strong>
+                        </h1>
+                    </li>
+                    <li>
+                        <div class="row mx-3 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="col-md-3">
+                                <div class="md-form">
+                                    <input type="text" id="form1" class="form-control">
+                                    <label for="form1">Your city</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="md-form">
+                                    <input type="text" id="form2" class="form-control validate">
+                                    <label for="form2">Street</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="md-form">
+                                    <input type="text" id="form3" class="form-control validate">
+                                    <label for="form3">House</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="md-form">
+                                    <button class="btn btn-lg btn-danger">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="payment">
+                        <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-money fa-2x" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/.Mask-->
+        </header>
+
+        <div class="container">
+
+            <!-- Section: About -->
+            <section class="section about mb-5 pb-5" id="about">
+
+                <!-- Secion heading -->
+                <h1 class="text-center font-bold mt-5 pt-5 mb-5 pb-3 drk-grey-text wow fadeIn" data-wow-delay="0.2s">
+                    <em>About us</em>
+                </h1>
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Column column -->
+                    <div class="col-xl-5 mr-auto mb-r col-lg-6 wow fadeIn" data-wow-delay="0.4s">
+
+                        <!-- Image -->
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/34.jpg" class="img-fluid rounded z-depth-1-half" alt="My photo">
+
+                    </div>
+                    <!-- Column column -->
+
+                    <!-- Grid column column -->
+                    <div class="col-xl-6 col-lg-6 pb-3 wow fadeIn" data-wow-delay="0.4s">
+
+                        <!-- Description -->
+                        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam, dicta
+                            ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque animi maxime.</p>
+
+                        <p align="justify">Nemo animi soluta ratione quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni
+                            impedit eaque delectus, beatae maxime temporibus maiores quibusdam quasi rem magnam.</p>
+
+                        <ul>
+                            <li>Nemo animi soluta ratione</li>
+                            <li>Beatae maxime temporibus</li>
+                            <li>Consectetur adipisicing elit</li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </section>
+            <!-- Section: About -->
+
+            <hr>
+
+            <!--Section: Menu-->
+            <div class="container">
+                <section class="section my-4 pb-5" id="products">
+
+                    <!-- Secion heading -->
+                    <h1 class="text-center font-bold mt-5 pt-4 mb-5 pb-3 drk-grey-text wow fadeIn" data-wow-delay="0.2s">
+                        <em>Menu</em>
+                    </h1>
+
+                    <!--Section description-->
+                    <p class="text-center mb-5 wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate
+                        esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.
+                    </p>
+
+                    <!--First row-->
+                    <div class="row wow fadeIn flex-center" data-wow-delay="0.4s">
+                        <!--First column-->
+                        <div class="col-lg-8 col-md-10">
+
+                            <!--Menu-->
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="table-warning">
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Quantity</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Tomato soup</td>
+                                            <td>400 ml</td>
+                                            <td>5 $</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Caesar salad</td>
+                                            <td>150 g</td>
+                                            <td>10 $</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Beef steak</td>
+                                            <td>200 g</td>
+                                            <td>15 $</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Dumplings</td>
+                                            <td>6 pieces</td>
+                                            <td>8 $</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Apple cake</td>
+                                            <td>80 g</td>
+                                            <td>6 $</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--Menu-->
+
+                        </div>
+                        <!--/First column-->
+                    </div>
+                    <!--/First row-->
+
+                </section>
+
+            </div>
+            <!--/Section: Menu-->
+
+            <hr>
+
+            <!--Section: Products-->
+            <section class="section" id="specials">
+
+                <!-- Secion heading -->
+                <h1 class="text-center font-bold mt-5 pt-4 mb-5 pb-3 drk-grey-text wow fadeIn" data-wow-delay="0.2s">
+                    <em>Our specials</em>
+                </h1>
+
+                <p class="grey-text text-center ml-3 mr-3 mt-1 mb-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique.
+                </p>
+
+                <!--First row-->
+                <div class="row text-center mr-2 ml-2 mt-3">
+
+                    <!--First column-->
+                    <div class="col-lg-4 col-md-12 mb-r wow fadeIn" data-wow-delay="0.4s">
+
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card image-->
+                            <img class="img-fluid" src="https://mdbootstrap.com/img/Others/food6.jpg" alt="Card image cap">
+
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class="card-title">
+                                    <strong>Card title</strong>
+                                </h4>
+                                <!--Text-->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="font-bold dark-grey-text">Read more</a>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--/First column-->
+
+                    <!--Second column-->
+                    <div class="col-lg-4 col-md-6 mb-r wow fadeIn" data-wow-delay="0.4s">
+
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card image-->
+                            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg" alt="Card image cap">
+
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class="card-title">
+                                    <strong>Card title</strong>
+                                </h4>
+                                <!--Text-->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="font-bold dark-grey-text">Read more</a>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--/Second column-->
+
+                    <!--Third column-->
+                    <div class="col-lg-4 col-md-6 mb-r wow fadeIn" data-wow-delay="0.4s">
+
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card image-->
+                            <img class="img-fluid" src="https://mdbootstrap.com/img/Others/food7.jpg" alt="Card image cap">
+
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class="card-title">
+                                    <strong>Card title</strong>
+                                </h4>
+                                <!--Text-->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="font-bold dark-grey-text">Read more</a>
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--/Third column-->
+
+                </div>
+                <!--/First row-->
+
+            </section>
+            <!--/Section: Products-->
+
+        </div>
+
+        <!--Footer-->
+        <footer class="page-footer center-on-small-only">
+
+            <!--Footer Links-->
+            <div class="container mt-5 mb-4 text-center text-md-left">
+                <div class="row">
+
+                    <!--First column-->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+                        <h6 class="title font-bold">
+                            <strong>Company name</strong>
+                        </h6>
+                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.</p>
+                    </div>
+                    <!--/.First column-->
+
+                    <!--Second column-->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
+                        <h6 class="title font-bold">
+                            <strong>Products</strong>
+                        </h6>
+                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">MDBootstrap</a>
+                        </p>
+                        <p>
+                            <a href="#!">MDWordPress</a>
+                        </p>
+                        <p>
+                            <a href="#!">BrandFlow</a>
+                        </p>
+                        <p>
+                            <a href="#!">Bootstrap Angular</a>
+                        </p>
+                    </div>
+                    <!--/.Second column-->
+
+                    <!--Third column-->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r">
+                        <h6 class="title font-bold">
+                            <strong>Useful links</strong>
+                        </h6>
+                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Your Account</a>
+                        </p>
+                        <p>
+                            <a href="#!">Become an Affiliate</a>
+                        </p>
+                        <p>
+                            <a href="#!">Shipping Rates</a>
+                        </p>
+                        <p>
+                            <a href="#!">Help</a>
+                        </p>
+                    </div>
+                    <!--/.Third column-->
+
+                    <!--Fourth column-->
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h6 class="title font-bold">
+                            <strong>Contact</strong>
+                        </h6>
+                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+                        <p>
+                            <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                        <p>
+                            <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                        <p>
+                            <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!--/.Fourth column-->
+
+                </div>
+            </div>
+            <!--/.Footer Links-->
+
+            <!-- Copyright-->
+            <div class="footer-copyright">
+                <div class="container-fluid">
+                    © 2017 Copyright:
+                    <a href="https://www.MDBootstrap.com">
+                        <strong> MDBootstrap.com</strong>
+                    </a>
+                </div>
+            </div>
+            <!--/.Copyright -->
+
+        </footer>
+        <!--/.Footer-->
+
+        <!-- SCRIPTS -->
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+
+        <!-- Bootstrap dropdown -->
+        <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+        <script>
+            new WOW().init();
+        </script>
+
+</body>
+
+</html>
