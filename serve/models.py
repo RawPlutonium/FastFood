@@ -15,9 +15,12 @@ class restaurant(models.Model):
 class Food(models.Model):
 	"""docstring for Food"""
 	title = models.CharField(max_length=100)
-	restaurant = models.ForeignKey(restaurant,on_delete=models.CASCADE)
+	restaurant = models.ForeignKey(restaurant,null=True)
 	category = models.CharField(max_length=100)
-
-
-
+class Menu(models.Model):
+	"""docstring for Menu"""
+	food = models.ForeignKey(Food)
+	quantity = models.CharField(max_length=100)
+	price = models.IntegerField()
+	restaurant = models.ForeignKey(restaurant,null=True)
 		
