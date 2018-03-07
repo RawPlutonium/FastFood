@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
 	url(r'^$',views.landing,name='landing'),
-	url(r'^$',views.about, name='about')
+	url(r'^about',views.about, name='about'),
+	url(r'^order',views.order,name='order'),
 ]

@@ -121,64 +121,20 @@
                 </div>
             </div>
         </nav>
+    </header>
         <!--/.Navbar-->
 
-        <!--Mask-->
-        <div class="view hm-black-light">
-            <div class="full-bg-img flex-center">
-                <ul>
-                    <li>
-                        <h1 class="display-4 mb-5 mt-5 pt-5 wow fadeInUp title">
-                            <strong>Hey, wanna eat something?</strong>
-                        </h1>
-                    </li>
-                    <li>
-                    	<form action="{% url 'order'%}" method="GET">
-                        <div class="row mx-3 wow fadeIn" data-wow-delay="0.4s">
-                            <div class="col-md-3">
-                                <div class="md-form">
-                                    <input type="text" id="form1" class="form-control" name="area">
-                                    <label for="form1">Area</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="md-form">
-                                    <input type="text" id="form2" class="form-control validate" name="where">
-                                    <label for="form2">Apartment/Estate</label>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="md-form">
-                                    <input type="text" id="form3" class="form-control validate" name="number">
-                                    <label for="form3" >House</label>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="md-form">
-                                    <button class="btn btn-lg btn-danger" type="submit">Order</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    </li>
-                    <li class="payment">
-                        <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-money fa-2x" aria-hidden="true"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--/.Mask-->
-        </header>
-
-       
-{% block content %}
-
-
-{% endblock %}
-        <!--Footer-->
-        <footer class="page-footer center-on-small-only">
+	<table class="table">
+		<th>
+<td><p>Later</p></td>
+</th>
+<tr>
+<td>{{name}}</p></td>
+<td><p>{{hse}}</p></td>
+<td><p>{{place}}</p></td>
+</tr>
+</table>
+<footer class="page-footer center-on-small-only">
 
             <!--Footer Links-->
             <div class="container mt-5 mb-4 text-center text-md-left">
@@ -293,3 +249,4 @@
 </body>
 
 </html>
+

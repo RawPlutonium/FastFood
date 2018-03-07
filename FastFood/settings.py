@@ -25,7 +25,7 @@ SECRET_KEY = 'y(1o_ki2m+5da5tw_!(#t50w87g#u0#zu@eym1b)4+(p-k+mr!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'localhost',u'techboy.pythonanywhere.com']
+ALLOWED_HOSTS = [u'localhost',u'rawplutonium.pythonanywhere.com']
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Application definition
