@@ -1,4 +1,13 @@
 /* Your custom styles */
-.l{
-	font-family: 'Coiny', cursive;
+.navbar-brand{
+	/*font-family: 'Coiny', cursive;*/
+	font-family: 'Lobster', cursive;
+	padding-right: 60px;
+}
+.nav-link{
+	font-family: 'Questrial', sans-serif;
+	font-size: 17px;
+}
+.nav-link :active{
+	box-shadow: none;
 }
