@@ -14,3 +14,5 @@ def order(request):
 		place = request.GET['where']
 		hse = request.GET['number']
 	return render(request,'serve/order.html',{'area' : area, 'place' : place,'hse' : hse})
+def signup(request):
+	return render(request,'serve/signup.html')

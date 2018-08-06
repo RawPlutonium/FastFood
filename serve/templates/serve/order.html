@@ -1,252 +1,90 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'serve/base.html' %}
+{% block content %}
+<hr>
 
-<head>
+<!--Section: Menu-->
+<div class="container">
+    <section class="section my-4 pb-5" id="products">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- Secion heading -->
+        <h1 class="text-center font-bold mt-5 pt-4 mb-5 pb-3 drk-grey-text wow fadeIn" data-wow-delay="0.2s">
+            <em>Restaurants near you</em>
+        </h1>
 
-    <title>Rocketeers Food</title>
+        <!--Section description-->
+        <p class="text-center mb-5 wow fadeIn" data-wow-delay="0.2s">
+            Hey {{name}} ! We can see that you live in {{place}} and in {{hse}}. These are some restaurants near you.
+            If you'd like to sign up for our services please do so here.
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
-
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Coiny|Lobster|Questrial" rel="stylesheet">
-    <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-
-        .navbar {
-            background-color: #392a3d;
-        }
-
-        footer.page-footer {
-            background-color: #392a3d;
-            margin-top: 2rem;
-        }
-
-        .view {
-            background: url("https://mdbootstrap.com/img/Photos/Others/images/80.jpg")no-repeat center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            min-height: 100vh;
-        }
-
-        .full-bg-img {
-            color: #fff;
-        }
-
-        .payment .fa:not(:first-child) {
-            margin-left: 10px;
-            color: rgba(255, 255, 255, .8);
-        }
-
-        input[type="text"]:focus:not([readonly]) {
-            border-color: #ff3547;
-            box-shadow: 0 1px 0 0 #ff3547;
-            color: #fff;
-        }
-
-        input[type="text"]:not([readonly])+label {
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 400;
-            font-size: 1.2rem
-        }
-
-        input[type="text"]:focus:not([readonly])+label {
-            color: #fff;
-        }
-
-        .navbar .btn-group .dropdown-menu a:hover {
-            color: #000 !important;
-        }
-
-        .navbar .btn-group .dropdown-menu a:active {
-            color: #fff !important;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!--Navigation & Intro-->
-    <header>
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-            <div class="container">
-                <a class="navbar-brand pull-left" href="#">
-                    Rocketeers
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item btn-group">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Restaurants
-                            </a>
-                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Big Square</a>
-                                <a class="dropdown-item" href="#">Java</a>
-                                <a class="dropdown-item" href="#">Mambo Italia</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    </form>
+        </p>
+        <center>
+        <div class="col-md-3">
+                <div class="md-form">
+                    <button class="btn btn-lg btn-danger"><a href"{%url 'signup' %}">Sign Up</a></button>
                 </div>
-            </div>
-        </nav>
-    </header>
-        <!--/.Navbar-->
+        </div>
+    </center>
+        <!--First row-->
+        <div class="row wow fadeIn flex-center" data-wow-delay="0.4s">
+            <!--First column-->
+            <div class="col-lg-8 col-md-10">
 
-	<table class="table">
-		<th>
-<td><p>Later</p></td>
-</th>
-<tr>
-<td>{{name}}</p></td>
-<td><p>{{hse}}</p></td>
-<td><p>{{place}}</p></td>
-</tr>
-</table>
-<footer class="page-footer center-on-small-only">
-
-            <!--Footer Links-->
-            <div class="container mt-5 mb-4 text-center text-md-left">
-                <div class="row">
-
-                    <!--First column-->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
-                        <h6 class="title font-bold">
-                            <strong>Company name</strong>
-                        </h6>
-                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit.</p>
-                    </div>
-                    <!--/.First column-->
-
-                    <!--Second column-->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
-                        <h6 class="title font-bold">
-                            <strong>Products</strong>
-                        </h6>
-                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <a href="#!">MDBootstrap</a>
-                        </p>
-                        <p>
-                            <a href="#!">MDWordPress</a>
-                        </p>
-                        <p>
-                            <a href="#!">BrandFlow</a>
-                        </p>
-                        <p>
-                            <a href="#!">Bootstrap Angular</a>
-                        </p>
-                    </div>
-                    <!--/.Second column-->
-
-                    <!--Third column-->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r">
-                        <h6 class="title font-bold">
-                            <strong>Useful links</strong>
-                        </h6>
-                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <a href="#!">Your Account</a>
-                        </p>
-                        <p>
-                            <a href="#!">Become an Affiliate</a>
-                        </p>
-                        <p>
-                            <a href="#!">Shipping Rates</a>
-                        </p>
-                        <p>
-                            <a href="#!">Help</a>
-                        </p>
-                    </div>
-                    <!--/.Third column-->
-
-                    <!--Fourth column-->
-                    <div class="col-md-4 col-lg-3 col-xl-3">
-                        <h6 class="title font-bold">
-                            <strong>Contact</strong>
-                        </h6>
-                        <hr class="orange lighten-3 mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
-                            <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
-                        <p>
-                            <i class="fa fa-envelope mr-3"></i> info@example.com</p>
-                        <p>
-                            <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-                        <p>
-                            <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
-                    </div>
-                    <!--/.Fourth column-->
-
+                <!--Menu-->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-warning">
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tomato soup</td>
+                                <td>400 ml</td>
+                                <td>5 $</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Caesar salad</td>
+                                <td>150 g</td>
+                                <td>10 $</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Beef steak</td>
+                                <td>200 g</td>
+                                <td>15 $</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Dumplings</td>
+                                <td>6 pieces</td>
+                                <td>8 $</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Apple cake</td>
+                                <td>80 g</td>
+                                <td>6 $</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <!--Menu-->
+
             </div>
-            <!--/.Footer Links-->
+            <!--/First column-->
+        </div>
+        <!--/First row-->
 
-            <!-- Copyright-->
-            <div class="footer-copyright">
-                <div class="container-fluid">
-                    © 2017 Copyright:
-                    <a href="https://www.MDBootstrap.com">
-                        <strong> MDBootstrap.com</strong>
-                    </a>
-                </div>
-            </div>
-            <!--/.Copyright -->
+    </section>
 
-        </footer>
-        <!--/.Footer-->
+</div>
+<!--/Section: Menu-->
 
-        <!-- SCRIPTS -->
-
-        <!-- JQuery -->
-        <script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
-
-        <!-- Bootstrap dropdown -->
-        <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
-
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
-
-        <script>
-            new WOW().init();
-        </script>
-
-</body>
-
-</html>
-
+<hr>
+{% endblock %}
